@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import axios from "axios";
 
 import PhotoList from "./PhotoList";
-import Photo from "./Photo";
+import EditImage from "./EditImage";
 
 function App() {
   const [allImages, setAllImages] = useState([]);
@@ -19,9 +19,7 @@ function App() {
     setIsLoading(false);
   }, []);
 
-
-
-  if (!isLoading) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
@@ -30,7 +28,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<PhotoList images={allImages} />} />
-          <Route path="/photos/:key" element={<Photo image={allImages} />} />
+          <Route
+            path="/images/:key"
+            element={<EditImage image={allImages} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
