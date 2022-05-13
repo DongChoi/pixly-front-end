@@ -1,15 +1,12 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Navigation.css";
 
 /** Navigation bar for site. Shows up on every page.
  *
  * Rendered by App.
  */
 
-function Navigation() {
-
-
+function NavBar() {
   return (
     <nav className="Navigation navbar navbar-expand-md">
       <div className="container-fluid">
@@ -23,7 +20,7 @@ function Navigation() {
             </NavLink>
           </li>
           <li className="nav-item me-4">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/upload">
               Upload
             </NavLink>
           </li>
@@ -33,4 +30,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default NavBar;
