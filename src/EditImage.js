@@ -1,21 +1,25 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import EditImageForm from "./EditImageForm";
 import Photo from "./Photo";
 
-function EditImage({ image }) {
+function EditImage({ getImageById }) {
   const navigate = useNavigate();
-  const location = useLocation();
-  image = location.state;
-  function handleSubmit() {
-    //POST REQUEST TO DATABASE
-    navigate("/");
-  }
+
+  const { key } = useParams()
+  const photo = getImageById(key)
+  console.log("Edit Image: ", photo)
+
+  // function handleSubmit(evt) {
+  //   //POST REQUEST TO DATABASE
+  //   evt.preventDefault()
+  //   //navigate("/");
+  // }
 
   return (
     <div>
-      <Photo image={image} />
-      <EditImageForm handleSubmit={handleSubmit} />
+      <Photo image={photo} />
+      <EditImageForm />
     </div>
   );
 }

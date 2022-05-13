@@ -1,12 +1,8 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
 function Photo({ image }) {
-  const location = useLocation();
-  if (!image) {
-    image = location.state.image;
-  }
 
+  console.log(image)
   return (
     <div>
       <img src={image.imageUrl} alt="" />

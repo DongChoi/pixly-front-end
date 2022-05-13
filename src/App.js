@@ -7,8 +7,15 @@ import PhotoList from "./PhotoList";
 import EditImage from "./EditImage";
 
 function App() {
+
   const [allImages, setAllImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  function getImageById(key) {
+    const [ image ] = allImages.filter( image => image.imageKey === key)
+    console.log("getById: ", allImages)
+    return image
+  }
 
   useEffect(() => {
     async function fetchAllImages() {
@@ -17,7 +24,7 @@ function App() {
     }
     fetchAllImages();
     setIsLoading(false);
-  }, []);
+  }, [allImages]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -30,8 +37,9 @@ function App() {
           <Route path="/" element={<PhotoList images={allImages} />} />
           <Route
             path="/images/:key"
-            element={<EditImage image={allImages} />}
+            element={<EditImage getImageById={getImageById} />}
           />
+
         </Routes>
       </BrowserRouter>
     </div>
