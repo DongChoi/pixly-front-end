@@ -1,9 +1,13 @@
 import React from "react";
 
-function Photo({ image }) {
+function Photo({ image, widthSize }) {
   return (
     <div>
-      <img src={image.imageUrl} alt="" />
+      {widthSize ? (
+        <img src={image.imageUrl} alt="" width={widthSize} />
+      ) : (
+        <img src={image.imageUrl} alt="" />
+      )}
     </div>
   );
 }

@@ -10,12 +10,18 @@ import Photo from "./Photo";
  *
  */
 function PhotoList({ images }) {
+  const widthSize = "650";
+
   return (
-    <div>
+    <div className="Pixly-PhotoList">
       <h1>View our pretty pics</h1>
       {images.map((image) => (
-        <Link to={`/images/${image.imageKey}`}>
-          <Photo image={image} key={image.imageKey} />
+        <Link
+          to={`/images/${image.imageKey}`}
+          key={image.imageKey}
+          className="Photo"
+        >
+          <Photo image={image} key={image.imageKey} widthSize={widthSize} />
         </Link>
       ))}
     </div>

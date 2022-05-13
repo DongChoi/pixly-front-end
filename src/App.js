@@ -32,16 +32,6 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  // async function testdownload() {
-  //   const resp = await axios.get("http://localhost:5001/test");
-  //   const blob = await resp.data.blob();
-  //   console.log(resp);
-  //   const url = URL.createObjectURL(blob);
-  //   return url;
-  // }
-
-  // const url = testdownload();
-
   function targetImage(imageKey) {
     localStorage.setItem("imageKey", imageKey);
     setImageKey(localStorage.get("imageKey"));
@@ -65,13 +55,13 @@ function App() {
   }
 
   return (
-    <div className="App bgimage">
+    <div>
       <ImageKeyContext.Provider value={{ imageKey }}>
         {/* HERE IT ISSS HAHA
       <img src={url} alt="" /> */}
         <BrowserRouter>
-          {/* <NavBar /> */}
-          <div>
+          <NavBar />
+          <div className="Pixly">
             <Routes>
               <Route path="/upload" element={<UploadImage upload={upload} />} />
               <Route path="/" element={<PhotoList images={allImages} />} />

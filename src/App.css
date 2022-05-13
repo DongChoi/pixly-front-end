@@ -42,7 +42,7 @@
 body {
   width:100%;
   height:100vh;
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://wallpaperaccess.com/full/862206.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://2.bp.blogspot.com/-pAx6Z0P4ByQ/XIkaFQkydMI/AAAAAAAAAgo/UIp8xbsNt04sgO6JGidwE1kno8K6qBkzACKgBGAs/w0/night-sky-city-stars-anime-scenery-uhdpaper.com-4K-135.jpg");
   background-repeat: no-repeat;
   background-position: "center center";
   background-size:cover;
@@ -64,3 +64,49 @@ body {
 body {
   overflow: scroll;
 }
+
+h1 {
+  color: #d290f5;
+  text-align: center;
+  margin: 5% 0%;
+}
+
+.Pixly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  margin-bottom: 16%; 
+}
+
+nav {
+  background-color: slateblue;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+nav a {
+  padding: 0.5em 1em;
+  width: auto;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: rgb(53, 53, 53);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+nav.Navigation.navbar.navbar-expand-md {
+  background: #49759d38;
+}
+

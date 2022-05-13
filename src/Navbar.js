@@ -9,23 +9,11 @@ import { Link, NavLink } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="Navigation navbar navbar-expand-md">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Pix.ly
-        </Link>
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item me-4">
-            <NavLink className="nav-link" to="/">
-              All Photos
-            </NavLink>
-          </li>
-          <li className="nav-item me-4">
-            <NavLink className="nav-link" to="/upload">
-              Upload
-            </NavLink>
-          </li>
-        </ul>
-      </div>
+      <Link className="navbar-brand" to="/">
+        Pix.ly
+      </Link>
+      <NavLink to="/">All Photos</NavLink>
+      <NavLink to="/upload">Upload</NavLink>
     </nav>
   );
 }
