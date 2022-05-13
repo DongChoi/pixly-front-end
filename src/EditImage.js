@@ -6,9 +6,9 @@ import Photo from "./Photo";
 function EditImage({ getImageById }) {
   const navigate = useNavigate();
 
-  const { key } = useParams()
-  const photo = getImageById(key)
-  console.log("Edit Image: ", photo)
+  const { key } = useParams();
+  const photo = getImageById(key);
+  console.log("Edit Image: ", photo);
 
   // function handleSubmit(evt) {
   //   //POST REQUEST TO DATABASE

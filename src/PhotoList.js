@@ -15,7 +15,7 @@ function PhotoList({ images }) {
       <h1>View our pretty pics</h1>
       {images.map((image) => (
         <Link to={`/images/${image.imageKey}`}>
-          <Photo image={image} key={image.imageKey}  />
+          <Photo image={image} key={image.imageKey} />
         </Link>
       ))}
     </div>
